@@ -19,6 +19,11 @@ export default function Example() {
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
   <Link to="/" className="-m-1.5 p-1.5 flex items-center"> {/* ใช้ Link แทน a */}
+    <img
+      src="/images/logo.png"
+      className="h-10 w-auto"
+      alt="Logo"
+    />
     <span className="ml-3 text-white text-lg font-bold">ComeCamp</span>
   </Link>
 </div>
