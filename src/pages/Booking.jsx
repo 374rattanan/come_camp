@@ -50,7 +50,7 @@ const RegistrationForm = ({ onSubmit }) => {
     return (
         <div className="bg-white p-4 rounded-lg shadow-lg transition-shadow duration-200 hover:shadow-xl mb-4">
             <h2 className="text-lg font-bold mb-3 text-black">กรอกข้อมูล</h2>
-            <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-4 sm:grid-cols-2 text-black">
                 {Object.keys(formData).map((key) => (
                     <div key={key} className="sm:col-span-2">
                         <label htmlFor={key} className="block text-sm font-semibold text-black">
