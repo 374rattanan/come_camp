@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router-dom'; // นำเข้า Link
 import 'swiper/css';
 
+
 const images = [
     {
         id: 1,
@@ -108,11 +109,11 @@ export default function Example() {
                 <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 mt-12">
 
                     {products.map((product) => (
-                        <Link key={product.id} to={product.href} className="group">
+                        <Link key={product.id} to={`/detail/${product.id}`} className="group">
                             {/* ปรับ aspect ratio ให้รูปภาพเป็นสี่เหลี่ยมจัตุรัส */}
                             <div className="w-full h-56 overflow-hidden rounded-lg bg-gray-200">
                                 <img
-                                    alt={product.name} // ใช้ product.name แทน product.imageAlt
+                                    alt={product.name}
                                     src={product.imageSrc}
                                     className="h-full w-full object-cover object-center group-hover:opacity-75"
                                 />

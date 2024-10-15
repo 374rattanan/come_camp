@@ -17,16 +17,11 @@ export default function Example() {
     <div className="bg-[url('https://images.unsplash.com/photo-1712474715452-3bcd4acf6bca?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
-          <div className="flex lg:flex-1">
-            <a href="#highlights" className="-m-1.5 p-1.5 flex items-center">
-              <img
-                src="/images/logo.png"
-                className="h-10 w-auto"
-                alt="Logo"
-              />
-              <span className="ml-3 text-white text-lg font-bold">ComeCamp</span>
-            </a>
-          </div>
+        <div className="flex lg:flex-1">
+  <Link to="/" className="-m-1.5 p-1.5 flex items-center"> {/* ใช้ Link แทน a */}
+    <span className="ml-3 text-white text-lg font-bold">ComeCamp</span>
+  </Link>
+</div>
 
           <div className="flex lg:hidden">
             <button
