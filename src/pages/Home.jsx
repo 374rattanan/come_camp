@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router-dom'; // นำเข้า Link
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 
@@ -89,13 +90,13 @@ export default function Example() {
                 <h2 id="highlights" className="text-3xl font-bold text-center text-white mb-12">Highlights</h2>
 
                 {/* Swiper Slider */}
-                <Swiper spaceBetween={10} slidesPerView={1} loop={true}>
+                <Swiper spaceBetween={10} slidesPerView={1} loop={true} autoplay={{ delay: 2500, disableOnInteraction: false }} modules={[Autoplay]}>
                     {images.map((image) => (
                         <SwiperSlide key={image.id}>
                             <div className="w-full overflow-hidden rounded-lg bg-gray-200">
                                 <img
                                     src={image.src}
-                                    alt={image.alt}
+                                    alt={`Slide ${image.id}`}
                                     className="w-full object-cover object-center"
                                     style={{ height: '500px' }} // กำหนดความสูงของรูปภาพที่นี่
                                 />
