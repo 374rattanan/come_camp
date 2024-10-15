@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { StarIcon } from '@heroicons/react/20/solid'
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const product = {
   name: 'อุทยานแห่งชาติดอยผ้าห่มปก',
@@ -48,6 +49,7 @@ function classNames(...classes) {
 }
 
 export default function Example() {
+  const navigate = useNavigate();
   const [rating, setRating] = useState(0)
   const [reviewText, setReviewText] = useState('')
   const [reviews, setReviews] = useState(initialReviews)
@@ -160,7 +162,7 @@ export default function Example() {
 
                     <button
                       type="button"
-                      onClick={() => (window.location.href = '/Booking')}
+                      onClick={() => navigate('/Booking')}
                       className="mt-10 flex w-sm items-center justify-center rounded-md bg-lime-700 px-8 py-4 text-white font-bold hover:bg-lime-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                     >
                       จองลานกางเต็นท์
