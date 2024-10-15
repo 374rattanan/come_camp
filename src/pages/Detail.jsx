@@ -160,7 +160,7 @@ export default function Example() {
 
                     <button
                       type="button"
-                      onClick={() => (window.location.href = '/booking')}
+                      onClick={() => (window.location.href = '/Booking')}
                       className="mt-10 flex w-sm items-center justify-center rounded-md bg-lime-700 px-8 py-4 text-white font-bold hover:bg-lime-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                     >
                       จองลานกางเต็นท์
