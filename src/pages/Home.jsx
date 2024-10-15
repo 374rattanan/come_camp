@@ -21,7 +21,7 @@ const products = [
     {
         id: 1,
         name: 'อุทยานแห่งชาติดอยผ้าห่มปก',
-        href: '/detail/1',  
+        href: '#',
         imageSrc: 'https://www.uptomego.com/wp-content/uploads/2022/09/%E0%B8%94%E0%B8%AD%E0%B8%A2%E0%B8%9C%E0%B9%89%E0%B8%B2%E0%B8%AB%E0%B9%88%E0%B8%A1%E0%B8%9B%E0%B8%81-20.jpg',
     },
     {
@@ -104,26 +104,26 @@ export default function Example() {
                 </Swiper>
 
                 {/* Grid of products */}
-                <h2 id="park" className="text-2xl font-bold  text-white mb-8 mt-12">อุทยานแห่งชาติจังหวัดเชียงใหม่</h2>
+                <h2 id="#" className="text-2xl font-bold  text-white mb-8 mt-12">อุทยานแห่งชาติจังหวัดเชียงใหม่</h2>
                 <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 mt-12">
-                    
-                {products.map((product) => (
-    <Link key={product.id} to={product.href} className="group">
-        {/* ปรับ aspect ratio ให้รูปภาพเป็นสี่เหลี่ยมจัตุรัส */}
-        <div className="w-full h-56 overflow-hidden rounded-lg bg-gray-200">
-            <img
-                alt={product.name} // ใช้ product.name แทน product.imageAlt
-                src={product.imageSrc}
-                className="h-full w-full object-cover object-center group-hover:opacity-75"
-            />
-        </div>
-        <h3 className="mt-4 text-md text-white">{product.name}</h3>
-    </Link>
-))}
+
+                    {products.map((product) => (
+                        <Link key={product.id} to={product.href} className="group">
+                            {/* ปรับ aspect ratio ให้รูปภาพเป็นสี่เหลี่ยมจัตุรัส */}
+                            <div className="w-full h-56 overflow-hidden rounded-lg bg-gray-200">
+                                <img
+                                    alt={product.name} // ใช้ product.name แทน product.imageAlt
+                                    src={product.imageSrc}
+                                    className="h-full w-full object-cover object-center group-hover:opacity-75"
+                                />
+                            </div>
+                            <h3 className="mt-4 text-md text-white">{product.name}</h3>
+                        </Link>
+                    ))}
                 </div>
             </div>
-            
+
         </div>
-        
+
     );
 }
